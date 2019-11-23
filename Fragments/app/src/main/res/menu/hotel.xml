@@ -11,11 +11,11 @@
         app:showAsAction="collapseActionView|ifRoom"
         app:actionViewClass="androidx.appcompat.widget.SearchView"/>
 
-    <item
+    <!--<item
         android:id="@+id/action_new"
         android:title="@string/action_new_hotel"
         android:icon="@android:drawable/ic_menu_add"
-        app:showAsAction="ifRoom|withText"/>
+        app:showAsAction="ifRoom|withText"/>-->
 
     <item
         android:id="@+id/action_info"

@@ -72,4 +72,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSave"/>
 
+    <Button
+        android:id="@+id/btnOpenPref"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Abrir Preferências"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnReadPref"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnReadPref"
+        app:layout_constraintHorizontal_chainStyle="spread"/>
+
+    <Button
+        android:id="@+id/btnReadPref"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ler Preferências"
+        app:layout_constraintStart_toEndOf="@+id/btnOpenPref"
+        app:layout_constraintTop_toBottomOf="@+id/txtText"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

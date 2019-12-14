@@ -1,0 +1,4 @@
+<full-backup-content>
+<!--    <exclude domain="files" path="arquivo.txt"/>-->
+    <include domain="database" path="dbHotel"/>
+</full-backup-content>

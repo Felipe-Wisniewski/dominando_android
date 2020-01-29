@@ -64,6 +64,7 @@ dependencies {
 
     //Google Play Services - Auth
     implementation "com.google.android.gms:play-services-auth:$playservices_version"
+    implementation "com.google.android.gms:play-services-ads:$google_services_ads"
 
     //Firebase
     implementation "com.google.firebase:firebase-core:$firebase_core_version"

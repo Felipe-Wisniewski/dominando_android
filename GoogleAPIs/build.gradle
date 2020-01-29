@@ -17,6 +17,7 @@ buildscript {
         work_version = '2.3.0'
         playservices_version = '17.0.0'
         google_services_version = '4.2.0'
+        google_services_ads = '18.3.0'
         firebase_core_version = '17.2.2'
         firebase_messaging_version = '20.1.0'
     }

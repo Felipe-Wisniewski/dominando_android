@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".hotel_login.LoginActivity"></activity>
+        <activity android:name=".hotel_login.LoginActivity"/>
         <activity
             android:name=".hotel_details.HotelDetailsActivity"
             android:parentActivityName=".common.HotelActivity" />
@@ -33,6 +33,9 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id"/>
     </application>
 
 </manifest>

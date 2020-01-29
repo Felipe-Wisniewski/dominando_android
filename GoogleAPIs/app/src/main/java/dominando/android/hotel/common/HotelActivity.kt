@@ -5,6 +5,8 @@ import android.os.Handler
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.widget.SearchView
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import dominando.android.hotel.R
 import dominando.android.hotel.model.Hotel
 import dominando.android.hotel.hotel_details.HotelDetailsActivity
@@ -34,6 +36,8 @@ class HotelActivity : BaseActivity(), HotelListFragment.OnHotelClickListener,
             listFragment.hideDeleteMode()
             HotelFormFragment.newInstance().open(supportFragmentManager)
         }
+
+        initAdMob()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -105,4 +109,30 @@ class HotelActivity : BaseActivity(), HotelListFragment.OnHotelClickListener,
     override fun onQueryTextSubmit(query: String?) = true
 
     override fun onMenuItemActionExpand(item: MenuItem?): Boolean = true
+
+    private fun initAdMob() {
+        MobileAds.initialize(this, getString(R.string.admob_app_id))
+
+        val adRequest = AdRequest.Builder()
+            .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+            .addTestDevice("0025575238")
+            .build()
+
+        adView.loadAd(adRequest)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        adView.resume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        adView.pause()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        adView.destroy()
+    }
 }

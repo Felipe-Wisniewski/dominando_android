@@ -39,4 +39,7 @@
     <string name="button_ok">OK</string>
     <string name="button_logout">Logout</string>
     <string name="notification_text">Lista de Hoteis atualizada!</string>
+
+    <string name="admob_app_id" translatable="false">ca-app-pub-6188492226967010~4218573076</string>
+    <string name="admob_adunit_id" translatable="false">ca-app-pub-6188492226967010/9227357172</string>
 </resources>

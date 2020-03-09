@@ -71,11 +71,16 @@ class AlbumListWebFragment : AlbumListBaseFragment() {
     private fun loadAlbumsAsync() {
 
         downloadJob = launch {
+
+            IdleResource.instance.increment()
+
             showProgress(true)
 
             albums = withContext(Dispatchers.IO) {
                 AlbumHttp.loadAlbums()?.toList()
             }
+
+            IdleResource.instance.decrement()
 
             showProgress(false)
             updateList()

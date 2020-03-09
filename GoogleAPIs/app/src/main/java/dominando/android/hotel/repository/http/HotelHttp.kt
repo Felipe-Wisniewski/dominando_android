@@ -16,6 +16,7 @@ class HotelHttp(private val service: HotelHttpApi, private val repository: Hotel
     fun synchronizeWithServer() {
         if (currentUser.isBlank()) {
             throw SecurityException("Usuário não autenticado")
+
         } else {
             sendPendingData()
             updateLocal()

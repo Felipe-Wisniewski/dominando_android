@@ -46,7 +46,11 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
     implementation "com.squareup.picasso:picasso:$picasso_version"
 
+    implementation 'androidx.test.espresso:espresso-idling-resource:3.2.0'
+
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$junitx_version"
+    androidTestImplementation 'androidx.test:rules:1.2.0'
     androidTestImplementation "androidx.test.espresso:espresso-core:$expresso_version"
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.2.0'
 }

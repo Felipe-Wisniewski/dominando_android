@@ -17,8 +17,7 @@ class HotelFormViewModel(private val repository: HotelRepository) : ViewModel() 
     }
 
     fun saveHotel(hotel: Hotel): Boolean {
-        return validator.validate(hotel)
-            .also { validated ->
+        return validator.validate(hotel).also { validated ->
                 if (validated) repository.save(hotel)
             }
     }

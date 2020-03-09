@@ -52,6 +52,8 @@ class AlbumListDbFragment : AlbumListBaseFragment() {
         super.onActivityCreated(savedInstanceState)
 
         launch {
+            IdleResource.instance.increment()
+
             albumList = withContext(Dispatchers.IO) {
                 repo.loadFavorites()
             }
@@ -61,6 +63,8 @@ class AlbumListDbFragment : AlbumListBaseFragment() {
                     updateList(albums)
                 }
             })
+
+            IdleResource.instance.decrement()
         }
     }
 

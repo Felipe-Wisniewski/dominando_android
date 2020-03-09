@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
         lstNames.adapter = adapter
     }
 
-    override fun onSaveInstanceState(outState: Bundle?) {
+    override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState?.putStringArrayList("names_list", names)
+        outState.putStringArrayList("names_list", names)
     }
 
     fun btnAddClick(view: View) {

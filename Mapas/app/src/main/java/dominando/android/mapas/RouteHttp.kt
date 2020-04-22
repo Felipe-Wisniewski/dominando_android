@@ -19,7 +19,7 @@ object RouteHttp {
                         "sensor=true&mode=driving&key=%s",
                 orig.latitude, orig.longitude,
                 dest.latitude, dest.longitude,
-                "AIzaSyDK4VDlClHlWFV-YTR1uYvWvYON_db9ymc")
+                "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 
             val client = OkHttpClient()
 

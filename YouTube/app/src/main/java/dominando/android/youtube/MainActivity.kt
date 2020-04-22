@@ -30,7 +30,7 @@ class MainActivity : YouTubeBaseActivity() {
     }
 
     companion object {
-        private const val API_KEY = "AIzaSyBpFIASPfufEZp4wJ8ir0Mt5eeXj6lE3aY"
+        private const val API_KEY = "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
         private const val VIDEO_ID = "FHZ6bI3zb4M"
     }
 }
